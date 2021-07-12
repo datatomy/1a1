@@ -1,0 +1,71 @@
+#logo {
+    font-family: 'Russo One', sans-serif;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    /* animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction> <fill-mode> <play-state> */
+    animation: rotateY 5s ease 2s 3 normal forwards running;
+}
+
+#logo1 {
+    transform:  rotateY(180deg);
+}
+
+@keyframes rotateY {
+    0% {
+        transform:  rotateY(0deg);
+    }
+    100% {
+        transform:  rotateY(360deg);
+    }
+}
+
+#footer {
+    font-size: 9px;
+    max-width: 296px;
+}
+
+@media (min-width: 375px) {
+    #footer {
+        font-size: 11px;
+        max-width: 351px;
+    }
+}
+
+@media (min-width: 425px) {
+    #footer {
+        font-size: 12px;
+        max-width: 401px;
+    }
+}
+
+@media (min-width: 576px) {
+    #footer {
+        font-size: 12px;
+        max-width: 381px;
+    }
+}
+
+@media (min-width: 768px) {
+    #footer {
+        font-size: 12px;
+        max-width: 396px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #footer {
+        font-size: 9px;
+        max-width: 295.98px;
+    }
+}
+
+@media (min-width: 1440px) {
+    #footer {
+        font-size: 12px;
+        max-width: 416px;
+    }
+}
