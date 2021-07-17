@@ -28,13 +28,9 @@
     vertical-align: middle;
 }
 
-.tarjetaRP {
-    max-height: 192px;
-}
-
 #footer {
     font-size: 10px !important;
-    background-color: var(--bs-cyan);
+    background-color: var(--bs-teal);
 }
 
 @media (min-width: 772px) {
