@@ -28,56 +28,19 @@
     vertical-align: middle;
 }
 
+.tarjetaRP {
+    max-height: 192px;
+}
+
 #footer {
-    font-size: 9px;
-    max-width: 296px;
+    font-size: 10px !important;
+    background-color: var(--bs-cyan);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 772px) {
     #footer {
-        font-size: 11px;
-        max-width: 351px;
-    }
-}
-
-@media (min-width: 425px) {
-    #footer {
-        font-size: 12px;
-        max-width: 401px;
-    }
-}
-
-@media (max-width: 575px) {
-    #footer {
-        position: relative !important;
-    }
-}
-
-@media (min-width: 576px) {
-    #footer {
-        font-size: 12px;
-        max-width: 381px;
-    }
-}
-
-@media (min-width: 768px) {
-    #footer {
-        font-size: 12px;
-        max-width: 396px;
-    }
-}
-
-@media (min-width: 1024px) {
-    #footer {
-        font-size: 9px;
-        max-width: 295.98px;
-        
-    }
-}
-
-@media (min-width: 1440px) {
-    #footer {
-        font-size: 12px;
-        max-width: 416px;
+        position: fixed;
+        bottom: 0;
+        font-size: 15px !important;
     }
 }

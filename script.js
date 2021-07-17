@@ -13,6 +13,7 @@ async function getData() {
   date[0].innerHTML = update;
   date[1].innerHTML = update;
   date[2].innerHTML = update;
+  date[3].innerHTML = update;
   /// Oficial
   let oficialCompra = data[0].compra;
   let spanOfiCompra = document.getElementById("oficialCompra");
@@ -27,6 +28,13 @@ async function getData() {
   let blueVenta = data[3].venta;
   let spanBlueVenta = document.getElementById("blueVenta");
   spanBlueVenta.innerHTML = blueVenta;
+  /// Turista
+  let turistaCompra = data[1].compra;
+  let spanTuristaCompra = document.getElementById("turistaCompra");
+  spanTuristaCompra.innerHTML = turistaCompra;
+  let turistaVenta = data[1].venta;
+  let spanTuristaVenta = document.getElementById("turistaVenta");
+  spanTuristaVenta.innerHTML = turistaVenta;
   /// RiesgoPais
   let riesgo = data[7].ultimo;
   let spanRiesgoPais = document.getElementById("riesgoPais");
