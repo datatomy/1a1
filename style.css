@@ -35,8 +35,6 @@
 
 @media (min-width: 772px) {
     #footer {
-        position: fixed;
-        bottom: 0;
         font-size: 15px !important;
     }
 }

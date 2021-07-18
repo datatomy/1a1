@@ -16,6 +16,7 @@ async function getData() {
   date[3].innerHTML = update;
   date[4].innerHTML = update;
   date[5].innerHTML = update;
+  date[6].innerHTML = update;
   /// Dolar Oficial
   let oficialCompra = parseFloat(data[0].compra.replace(/,/g, '.')).toFixed(2);
   let spanOfiCompra = document.getElementById("oficialCompra");
@@ -67,4 +68,12 @@ async function getData2() {
   let euroBlueVenta = data2.blue_euro.value_sell.toFixed(2);
   let spanEuroBlueVenta = document.getElementById("euroBlueVenta");
   spanEuroBlueVenta.innerHTML = euroBlueVenta;
+  /// Euro Turista
+  let euroTuristaCompra = data2.oficial_euro.value_buy.toFixed(2);
+  let spanEuroTuristaCompra = document.getElementById("euroTuristaCompra");
+  spanEuroTuristaCompra.innerHTML = euroTuristaCompra;
+  let euroTuristaVentaValor = parseInt(data2.oficial_euro.value_sell.toFixed(2));
+  let euroTuristaVenta = (euroTuristaVentaValor * 0.3) + (euroTuristaVentaValor * 0.35) + euroTuristaVentaValor;
+  let spanEuroTuristaVenta = document.getElementById("euroTuristaVenta");
+  spanEuroTuristaVenta.innerHTML = euroTuristaVenta;
 };
