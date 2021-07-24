@@ -1,7 +1,7 @@
 let url = "https://mercados.ambito.com//home/general";
 getData()
   .catch(error => {
-    console.log("Ups! Parece que hay un error al cargar la API.");
+    console.log("Ups! Parece que hay un error al cargar la API 1.");
     console.error(error);
   });
 async function getData() {
@@ -10,13 +10,11 @@ async function getData() {
   /// Fecha
   let update = data[3].fecha;
   let date = document.getElementsByClassName("update");
-  date[0].innerHTML = update;
-  date[1].innerHTML = update;
-  date[2].innerHTML = update;
-  date[3].innerHTML = update;
-  date[4].innerHTML = update;
-  date[5].innerHTML = update;
-  date[6].innerHTML = update;
+  let contador = 0;
+  for (var i = 0; i < date.length; i++) {
+    date[contador].innerHTML = update;
+    contador++;
+  }
   /// Dolar Oficial
   let oficialCompra = parseFloat(data[0].compra.replace(/,/g, '.')).toFixed(2);
   let spanOfiCompra = document.getElementById("oficialCompra");
@@ -25,30 +23,36 @@ async function getData() {
   let spanOfiVenta = document.getElementById("oficialVenta");
   spanOfiVenta.innerHTML = oficialVenta;
   /// Dolar Blue
-  let blueCompra = parseFloat(data[3].compra.replace(/,/g, '.')).toFixed(2);
+  let blueCompra = parseFloat(data[1].compra.replace(/,/g, '.')).toFixed(2);
   let spanBlueCompra = document.getElementById("blueCompra");
   spanBlueCompra.innerHTML = blueCompra;
-  let blueVenta = parseFloat(data[3].venta.replace(/,/g, '.')).toFixed(2);
+  let blueVenta = parseFloat(data[1].venta.replace(/,/g, '.')).toFixed(2);
   let spanBlueVenta = document.getElementById("blueVenta");
   spanBlueVenta.innerHTML = blueVenta;
   /// Dolar Turista
-  let turistaCompra = parseFloat(data[1].compra.replace(/,/g, '.')).toFixed(2);
+  let turistaCompra = parseFloat(data[3].compra.replace(/,/g, '.')).toFixed(2);
   let spanTuristaCompra = document.getElementById("turistaCompra");
   spanTuristaCompra.innerHTML = turistaCompra;
-  let turistaVenta = parseFloat(data[1].venta.replace(/,/g, '.')).toFixed(2);
+  let turistaVenta = parseFloat(data[3].venta.replace(/,/g, '.')).toFixed(2);
   let spanTuristaVenta = document.getElementById("turistaVenta");
   spanTuristaVenta.innerHTML = turistaVenta;
+  /// Oro
+  let oroCompra = parseFloat(data[13].compra.replace(/,/g, '.')).toFixed(2);
+  let spanOroCompra = document.getElementById("oroCompra");
+  spanOroCompra.innerHTML = oroCompra;
+  let oroVenta = parseFloat(data[13].venta.replace(/,/g, '.')).toFixed(2);
+  let spanOroVenta = document.getElementById("oroVenta");
+  spanOroVenta.innerHTML = oroVenta;
   /// Riesgo Pais
-  let riesgo = parseFloat(data[7].ultimo);
+  let riesgo = data[7].ultimo;
   let spanRiesgoPais = document.getElementById("riesgoPais");
   spanRiesgoPais.innerHTML = riesgo;
 };
 
-
 let url2 = "https://api.bluelytics.com.ar/v2/latest";
 getData2()
   .catch(error => {
-    console.log("Ups! Parece que hay un error al cargar la API.");
+    console.log("Ups! Parece que hay un error al cargar la API 2.");
     console.error(error);
   });
 async function getData2() {
@@ -73,7 +77,52 @@ async function getData2() {
   let spanEuroTuristaCompra = document.getElementById("euroTuristaCompra");
   spanEuroTuristaCompra.innerHTML = euroTuristaCompra;
   let euroTuristaVentaValor = parseInt(data2.oficial_euro.value_sell.toFixed(2));
-  let euroTuristaVenta = (euroTuristaVentaValor * 0.3) + (euroTuristaVentaValor * 0.35) + euroTuristaVentaValor;
+  let euroTuristaVenta = (euroTuristaVentaValor * 0.65) + euroTuristaVentaValor;
   let spanEuroTuristaVenta = document.getElementById("euroTuristaVenta");
-  spanEuroTuristaVenta.innerHTML = euroTuristaVenta;
+  spanEuroTuristaVenta.innerHTML = euroTuristaVenta.toFixed(2);
+};
+
+let url3 = "https://www.dolarsi.com/api/api.php?type=cotizador";
+getData3()
+  .catch(error => {
+    console.log("Ups! Parece que hay un error al cargar la API 3.");
+    console.error(error);
+  });
+async function getData3() {
+  const response3 = await fetch(url3);
+  const data3 = await response3.json();
+  /// Real Oficial
+  let realCompra = parseFloat(data3[2].casa.compra.replace(/,/g, '.')).toFixed(2);
+  let spanRealCompra = document.getElementById("realCompra");
+  spanRealCompra.innerHTML = realCompra;
+  let realVenta = parseFloat(data3[2].casa.venta.replace(/,/g, '.')).toFixed(2);
+  let spanRealVenta = document.getElementById("realVenta");
+  spanRealVenta.innerHTML = realVenta;
+  /// Real Blue
+  let spanRealBlueCompra = document.getElementById("realBlueCompra");
+  spanRealBlueCompra.innerHTML = (realCompra * 1.9456).toFixed(2); 
+  let spanRealBlueVenta = document.getElementById("realBlueVenta");
+  spanRealBlueVenta.innerHTML = (realVenta * 1.9578).toFixed(2);
+  /// Real Turista
+  let spanRealTuristaCompra = document.getElementById("realTuristaCompra");
+  spanRealTuristaCompra.innerHTML = realCompra;
+  let spanRealTuristaVenta = document.getElementById("realTuristaVenta");
+  spanRealTuristaVenta.innerHTML = (realVenta * 1.65).toFixed(2);
+  /// Libra Oficial
+  let libraCompra = parseFloat(data3[3].casa.compra.replace(/,/g, '.')).toFixed(2);
+  let spanLibraCompra = document.getElementById("libraCompra");
+  spanLibraCompra.innerHTML = libraCompra;
+  let libraVenta = parseFloat(data3[3].casa.venta.replace(/,/g, '.')).toFixed(2);
+  let spanLibraVenta = document.getElementById("libraVenta");
+  spanLibraVenta.innerHTML = libraVenta;
+  /// Libra Blue
+  let spanLibraBlueCompra = document.getElementById("libraBlueCompra");
+  spanLibraBlueCompra.innerHTML = (libraCompra * 2.1055).toFixed(2); 
+  let spanLibraBlueVenta = document.getElementById("libraBlueVenta");
+  spanLibraBlueVenta.innerHTML = (libraVenta * 1.8152).toFixed(2);
+  /// Libra Turista
+  let spanLibraTuristaCompra = document.getElementById("libraTuristaCompra");
+  spanLibraTuristaCompra.innerHTML = libraCompra;
+  let spanLibraTuristaVenta = document.getElementById("libraTuristaVenta");
+  spanLibraTuristaVenta.innerHTML = (libraVenta * 1.65).toFixed(2);
 };
