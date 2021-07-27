@@ -40,7 +40,7 @@ async function getData() {
   let oroCompra = parseFloat(data[13].compra.replace(/,/g, '.')).toFixed(2);
   let spanOroCompra = document.getElementById("oroCompra");
   spanOroCompra.innerHTML = oroCompra;
-  let oroVenta = parseFloat(data[13].venta.replace(/,/g, '.')).toFixed(2);
+  let oroVenta = parseFloat(data[13].ultimo.replace(/,/g, '.')).toFixed(2);
   let spanOroVenta = document.getElementById("oroVenta");
   spanOroVenta.innerHTML = oroVenta;
   /// Riesgo Pais
@@ -125,4 +125,25 @@ async function getData3() {
   spanLibraTuristaCompra.innerHTML = libraCompra;
   let spanLibraTuristaVenta = document.getElementById("libraTuristaVenta");
   spanLibraTuristaVenta.innerHTML = (libraVenta * 1.65).toFixed(2);
+};
+
+let url4 = "https://criptoya.com/api/buenbit/btc/ars";
+let url5 = "https://criptoya.com/api/buenbit/eth/ars";
+let url6 = "https://criptoya.com/api/buenbit/dai/ars";
+getData456()
+  .catch(error => {
+    console.log("Ups! Parece que hay un error al cargar la API 456.");
+    console.error(error);
+  });
+async function getData456() {
+  const response4 = await fetch(url4);
+  const response5 = await fetch(url5);
+  const response6 = await fetch(url6);
+  const data4 = await response4.json();
+  const data5 = await response5.json();
+  const data6 = await response6.json();
+  ///Criptoss
+  console.log(data4);
+  console.log(data5);
+  console.log(data6);
 };
