@@ -298,19 +298,191 @@
                 </div>
                 <!-- Oro -->
                 <div class="col-12 col-md-5">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
                         <div class="card-header py-1">
                           Oro
+                        </div>
+                        <div class="card-body bg-success">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-light">Compra</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="oroCompra"></span></p>
+                                </div>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Venta</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="oroVenta"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                          Actualizado <span class="update"></span>
+                        </div>
+                      </div>
+                </div>
+                <!-- Criptomonedas -->
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
+                        <div class="card-header py-1">
+                            Bitcoin
+                        </div>
+                        <div class="card-body bg-info">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-dark">Venta</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="bitcoin"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                            Actualizado <span class="update"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
+                        <div class="card-header py-1">
+                            Ethereum
+                        </div>
+                        <div class="card-body bg-info">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-dark">Venta</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="ethereum"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                            Actualizado <span class="update"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
+                        <div class="card-header py-1">
+                            DAI
                         </div>
                         <div class="card-body bg-info">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-dark">Compra</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="oroCompra"></span></p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="daiCompra"></span></p>
                                 </div>
                                 <div class="col border-start border-2 border-dark">
                                     <p class="card-text text-dark">Venta</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="oroVenta"></span></p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="daiVenta"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                            Actualizado <span class="update"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- COVID -->
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                        <div class="card-header py-1">
+                          COVID Casos Positivos
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-light">Ayer</p>
+                                    <p class="card-title text-light h2"><span id="covidAyer"></span></p>
+                                </div>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Total</p>
+                                    <p class="card-title text-light h2"><span id="covidTotal"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                          Actualizado <span class="update"></span>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                        <div class="card-header py-1">
+                          COVID Datos
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-light">Fallecidos</p>
+                                    <p class="card-title text-light h2"><span id="covidFallecidos"></span></p>
+                                </div>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Recuperados</p>
+                                    <p class="card-title text-light h2"><span id="covidRecuperados"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                          Actualizado <span class="update"></span>
+                        </div>
+                      </div>
+                </div>
+                <!-- COVID Vacunacion -->
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                        <div class="card-header py-1">
+                          COVID Vacunacion
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-light">1ra Dosis</p>
+                                    <p class="card-title text-light h3"><span id="covid1Dosis"></span></p>
+                                </div>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">2da Dosis</p>
+                                    <p class="card-title text-light h3"><span id="covid2Dosis"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                          Actualizado <span class="update"></span>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                        <div class="card-header py-1">
+                          COVID Vacunacion Porcentaje
+                        </div>
+                        <div class="card-body bg-dark">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-light">1ra Dosis</p>
+                                    <p class="card-title text-light h2"><span id="covid1DosisPor"></span><span class="signo">%</span></p>
+                                </div>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">2da Dosis</p>
+                                    <p class="card-title text-light h2"><span id="covid2DosisPor"></span><span class="signo">%</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size: small;">
+                          Actualizado <span class="update"></span>
+                        </div>
+                      </div>
+                </div>
+                <!-- Inflación -->
+                <div class="col-12 col-md-5">
+                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-danger">
+                        <div class="card-header py-1">
+                          Inflación
+                        </div>
+                        <div class="card-body bg-danger">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text text-light"><span id="mesInflacion">Mayo</span></p>
+                                    <p class="card-title text-light h2"><span id="inflacionMensual"></span><span class="signo">%</span></p>
+                                </div>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Últ. 12 meses</p>
+                                    <p class="card-title text-light h2"><span id="inflacionAnual">50.20</span><span class="signo">%</span></p>
                                 </div>
                             </div>
                         </div>
@@ -346,7 +518,7 @@
                 </div>
             </div>
         </div>
-        <div id="footer" class="container-fluid text-center py-1 text-center rounded-top shadow fs-6">Mar del plata, Buenos Aires, Argentina | Hecho por <a class="text-secondary" href="https://github.com/datatomy" style="text-decoration: none;">datatomy</a>.
+        <div id="footer" class="container-fluid text-center py-1 text-center rounded-top shadow fs-6">Mar del plata, Argentina | Hecho por <a class="text-secondary" href="https://github.com/datatomy" style="text-decoration: none;">datatomy</a>.
         </div>
     </body>
 </html>

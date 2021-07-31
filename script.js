@@ -142,8 +142,93 @@ async function getData456() {
   const data4 = await response4.json();
   const data5 = await response5.json();
   const data6 = await response6.json();
-  ///Criptoss
-  console.log(data4);
-  console.log(data5);
-  console.log(data6);
+  ///Bitcoin
+  let bitcoin = Intl.NumberFormat().format(data4.ask);
+  let spanBitcoin = document.getElementById("bitcoin");
+  spanBitcoin.innerHTML = bitcoin;
+  ///Ethereum
+  let ethereum = Intl.NumberFormat().format(data5.ask);
+  let spanEthereum = document.getElementById("ethereum");
+  spanEthereum.innerHTML = ethereum;
+  ///DAI
+  let daiCompra = parseFloat(data6.bid).toFixed(2);
+  let spanDaiCompra = document.getElementById("daiCompra");
+  spanDaiCompra.innerHTML = daiCompra;
+  let daiVenta = parseFloat(data6.ask).toFixed(2);
+  let spanDaiVenta = document.getElementById("daiVenta");
+  spanDaiVenta.innerHTML = daiVenta;
 };
+
+//let urlOpcional = "http://estudiodelamo.com/wp-admin/admin-ajax.php?action=wp_ajax_ninja_tables_public_action&table_id=18156&target_action=get-all-data&default_sorting=manual_sort&ninja_table_public_nonce=d2f259d80a";
+let url7 = "https://apis.datos.gob.ar/series/api/series/?ids=145.3_INGNACUAL_DICI_M_38&limit=1000&sort=desc";
+getData7()
+  .catch(error => {
+    console.log("Ups! Parece que hay un error al cargar la API 7.");
+    console.error(error);
+  });
+async function getData7() {
+  const response7 = await fetch(url7);
+  const data7 = await response7.json();
+  let inflacionMensual = ((data7.data[0][1]) * 100).toFixed(2);
+  let spanInflacionMensual = document.getElementById("inflacionMensual");
+  spanInflacionMensual.innerHTML = inflacionMensual;
+};
+
+let url8 = "https://coronavirus-tracker-api.herokuapp.com/v2/locations/6?source=jhu&timelines=true";
+/// urlOpcional https://covid-api.mmediagroup.fr/v1/cases?country=Argentina
+getData8()
+  .catch(error => {
+    console.log("Ups! Parece que hay un error al cargar la API 8.");
+    console.error(error);
+  });
+async function getData8() {
+  const response8 = await fetch(url8);
+  const data8 = await response8.json();
+  /// COVID Casos
+  let covidTotal = Intl.NumberFormat().format(data8.location.latest.confirmed);
+  let spanCovidTotal = document.getElementById("covidTotal");
+  spanCovidTotal.innerHTML = covidTotal;
+  let covidDias = Object.values(data8.location.timelines.confirmed.timeline);
+  let covidAyer = Intl.NumberFormat().format((covidDias[covidDias.length - 1]) - (covidDias[covidDias.length - 2]));
+  let spanCovidAyer = document.getElementById("covidAyer");
+  spanCovidAyer.innerHTML = covidAyer;
+  /// COVID Datos
+  let covidFallecidos = Intl.NumberFormat().format(data8.location.latest.deaths);
+  let spanCovidFallecidos = document.getElementById("covidFallecidos");
+  spanCovidFallecidos.innerHTML = covidFallecidos;
+  let covidRecuperados = Intl.NumberFormat().format(data8.location.latest.recovered);
+  let spanCovidRecuperados = document.getElementById("covidRecuperados");
+  spanCovidRecuperados.innerHTML = covidRecuperados;
+};
+
+let url9 = "https://covid-api.mmediagroup.fr/v1/vaccines";
+getData9()
+  .catch(error => {
+    console.log("Ups! Parece que hay un error al cargar la API 9.");
+    console.error(error);
+  });
+async function getData9() {
+  const response9 = await fetch(url9);
+  const data9 = await response9.json();
+  /// COVID Vacunacion
+  let covid1Dosis = Intl.NumberFormat().format(data9.Argentina.All.people_partially_vaccinated);
+  let spanCovid1Dosis = document.getElementById("covid1Dosis");
+  spanCovid1Dosis.innerHTML = covid1Dosis;
+  let covid2Dosis = Intl.NumberFormat().format(data9.Argentina.All.people_vaccinated);
+  let spanCovid2Dosis = document.getElementById("covid2Dosis");
+  spanCovid2Dosis.innerHTML = covid2Dosis;
+  /// COVID Vacunacion Porcentaje
+  let population = data9.Argentina.All.population;
+  let covid1DosisPor = ((data9.Argentina.All.people_partially_vaccinated) * 100 / (population)).toFixed(2);
+  let spanCovid1DosisPor = document.getElementById("covid1DosisPor");
+  spanCovid1DosisPor.innerHTML = covid1DosisPor;
+  let covid2DosisPor = ((data9.Argentina.All.people_vaccinated) * 100 / (population)).toFixed(2);
+  let spanCovid2DosisPor = document.getElementById("covid2DosisPor");
+  spanCovid2DosisPor.innerHTML = covid2DosisPor;
+};
+
+
+
+// var fecha2 = new Date(data8.location.last_updated);
+// console.log(fecha2);
+// console.log("Actualizado " + fecha2.getDate() + "/" + (fecha2.getMonth() + 1) + "/" + fecha2.getFullYear() + " - " + fecha2.getHours() + ":" + fecha2.getMinutes());
