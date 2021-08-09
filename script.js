@@ -14,7 +14,7 @@ async function getData() {
   for (var i = 0; i < date.length; i++) {
     date[contador].innerHTML = update;
     contador++;
-  }
+  };
   /// Dolar Oficial
   let oficialCompra = parseFloat(data[0].compra.replace(/,/g, '.')).toFixed(2);
   let spanOfiCompra = document.getElementById("oficialCompra");
@@ -22,6 +22,9 @@ async function getData() {
   let oficialVenta = parseFloat(data[0].venta.replace(/,/g, '.')).toFixed(2);
   let spanOfiVenta = document.getElementById("oficialVenta");
   spanOfiVenta.innerHTML = oficialVenta;
+  let updateDolarOficial = data[0].fecha;
+  let spanUpdateDolarOficial = document.getElementById("updateDolarOficial");
+  spanUpdateDolarOficial.innerHTML = updateDolarOficial;
   /// Dolar Blue
   let blueCompra = parseFloat(data[1].compra.replace(/,/g, '.')).toFixed(2);
   let spanBlueCompra = document.getElementById("blueCompra");
@@ -29,6 +32,9 @@ async function getData() {
   let blueVenta = parseFloat(data[1].venta.replace(/,/g, '.')).toFixed(2);
   let spanBlueVenta = document.getElementById("blueVenta");
   spanBlueVenta.innerHTML = blueVenta;
+  let updateDolarBlue = data[1].fecha;
+  let spanUpdateDolarBlue = document.getElementById("updateDolarBlue");
+  spanUpdateDolarBlue.innerHTML = updateDolarBlue;
   /// Dolar Turista
   let turistaCompra = parseFloat(data[3].compra.replace(/,/g, '.')).toFixed(2);
   let spanTuristaCompra = document.getElementById("turistaCompra");
@@ -36,6 +42,9 @@ async function getData() {
   let turistaVenta = parseFloat(data[3].venta.replace(/,/g, '.')).toFixed(2);
   let spanTuristaVenta = document.getElementById("turistaVenta");
   spanTuristaVenta.innerHTML = turistaVenta;
+  let updateDolarTurista = data[3].fecha;
+  let spanUpdateDolarTurista = document.getElementById("updateDolarTurista");
+  spanUpdateDolarTurista.innerHTML = updateDolarTurista;
   /// Oro
   let oroCompra = parseFloat(data[13].compra.replace(/,/g, '.')).toFixed(2);
   let spanOroCompra = document.getElementById("oroCompra");
@@ -43,10 +52,16 @@ async function getData() {
   let oroVenta = parseFloat(data[13].ultimo.replace(/,/g, '.')).toFixed(2);
   let spanOroVenta = document.getElementById("oroVenta");
   spanOroVenta.innerHTML = oroVenta;
+  let updateOro = data[13].fecha.replace(/-/g, '/');
+  let spanUpdateOro = document.getElementById("updateOro");
+  spanUpdateOro.innerHTML = updateOro;
   /// Riesgo Pais
   let riesgo = data[7].ultimo;
   let spanRiesgoPais = document.getElementById("riesgoPais");
   spanRiesgoPais.innerHTML = riesgo;
+  let updateRiesgoPais = data[7].fecha.replace(/-/g, '/');
+  let spanUpdateRiesgoPais = document.getElementById("updateRiesgoPais");
+  spanUpdateRiesgoPais.innerHTML = updateRiesgoPais;
 };
 
 let url2 = "https://api.bluelytics.com.ar/v2/latest";
@@ -58,6 +73,17 @@ getData2()
 async function getData2() {
   const response2 = await fetch(url2);
   const data2 = await response2.json();
+  /// Update Euro
+  let dateEuro = new Date(data2.last_update);
+  let textoDateEuro = dateEuro.getDate() + "/" + (dateEuro.getMonth() + 1) + "/" + dateEuro.getFullYear();
+  let textoHoraEuro = dateEuro.getHours() + ":" + dateEuro.getMinutes();
+  let updateEuro = textoDateEuro + " " + textoHoraEuro;
+  let spanDateEuro = document.getElementsByClassName("updateEuro");
+  let contadorEuro = 0;
+  for (var i = 0; i < spanDateEuro.length; i++) {
+    spanDateEuro[contadorEuro].innerHTML = updateEuro;
+    contadorEuro++;
+  };
   /// Euro Oficial
   let euroCompra = data2.oficial_euro.value_buy.toFixed(2);
   let spanEuroCompra = document.getElementById("euroCompra");
@@ -142,6 +168,14 @@ async function getData456() {
   const data4 = await response4.json();
   const data5 = await response5.json();
   const data6 = await response6.json();
+  /// Fecha
+  let updateCripto = fechaCompleta;
+  let dateCripto = document.getElementsByClassName("updateCripto");
+  let contadorCripto = 0;
+  for (var i = 0; i < dateCripto.length; i++) {
+    dateCripto[contadorCripto].innerHTML = updateCripto;
+    contadorCripto++;
+  };
   ///Bitcoin
   let bitcoin = Intl.NumberFormat().format(data4.ask);
   let spanBitcoin = document.getElementById("bitcoin");
@@ -169,9 +203,18 @@ getData7()
 async function getData7() {
   const response7 = await fetch(url7);
   const data7 = await response7.json();
+  /// Inflacion Dato
   let inflacionMensual = ((data7.data[0][1]) * 100).toFixed(2);
   let spanInflacionMensual = document.getElementById("inflacionMensual");
   spanInflacionMensual.innerHTML = inflacionMensual;
+  /// Inflacion Mes
+  let inflacionDate = new Date(data7.data[0][0]);
+  let mesInflacion = convertMonth((inflacionDate.getMonth() + 1));
+  let spanMesInflacion = document.getElementById("mesInflacion");
+  spanMesInflacion.innerHTML = mesInflacion;
+  ///Inflacion Update
+  let spanUpdateInflacion = document.getElementById("updateInflacion");
+  spanUpdateInflacion.innerHTML = mesInflacion + " " + inflacionDate.getFullYear();
 };
 
 let url8 = "https://coronavirus-tracker-api.herokuapp.com/v2/locations/6?source=jhu&timelines=true";
@@ -196,9 +239,17 @@ async function getData8() {
   let covidFallecidos = Intl.NumberFormat().format(data8.location.latest.deaths);
   let spanCovidFallecidos = document.getElementById("covidFallecidos");
   spanCovidFallecidos.innerHTML = covidFallecidos;
-  let covidRecuperados = Intl.NumberFormat().format(data8.location.latest.recovered);
-  let spanCovidRecuperados = document.getElementById("covidRecuperados");
-  spanCovidRecuperados.innerHTML = covidRecuperados;
+  /// COVID Recuperados (Hasta que se arregle y aparezca el valor original) 
+  let recoveredValues = Object.values(data8.location.timelines.recovered.timeline);
+  let contar2 = 0;
+  for (var i = 0; i < recoveredValues.length; i++) {
+    if (recoveredValues[contar2] > 4615830) {
+      let covidRecuperados = Intl.NumberFormat().format(recoveredValues[contar2]);
+      let spanCovidRecuperados = document.getElementById("covidRecuperados");
+      spanCovidRecuperados.innerHTML = covidRecuperados;
+    };
+    contar2++;
+  };
 };
 
 let url9 = "https://covid-api.mmediagroup.fr/v1/vaccines";
@@ -227,8 +278,65 @@ async function getData9() {
   spanCovid2DosisPor.innerHTML = covid2DosisPor;
 };
 
+/// Funcion Convertir Numero a Mes.
+function convertMonth(getMonth) {
+  let months = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+  return months[getMonth];
+};
+
+/// Variables de la fecha.
+var fechaActual = new Date();
+var añoActual = fechaActual.getFullYear();
+var mesActual = fechaActual.getMonth() + 1;
+var diaActual = fechaActual.getDate();
+var horaActual = fechaActual.getHours();
+var minutosActual = fechaActual.getMinutes();
+var fechaCompleta = diaActual + "/" + mesActual + "/" + añoActual + " " + horaActual + ":" + minutosActual;
+
+let url10 = "https://nolaborables.com.ar/api/v2/feriados/" + añoActual;
+getData10()
+  .catch(error => {
+    console.log("Ups! Parece que hay un error al cargar la API 10.");
+    console.error(error);
+  });
+async function getData10() {
+  const response10 = await fetch(url10);
+  const data10 = await response10.json();
+  /// Update Feriados
+  let spanUpdateFeriados = document.getElementById("updateFeriados");
+  spanUpdateFeriados.innerHTML = añoActual;
+  /// Proximos Feriados
+  let spanProximoFeriado = document.getElementById("proximoFeriado");
+  let spanProximoFeriado2 = document.getElementById("proximoFeriado2");
+  let contar = 0;
+  for (var i = 0; i < data10.length; i++) {
+    if (((data10[contar].mes >= mesActual) && (diaActual < data10[contar].dia)) || (data10[contar].mes > mesActual)) {
+      let mesConvertido = convertMonth(data10[contar].mes - 1);
+      spanProximoFeriado.innerHTML = data10[contar].dia + " de " + mesConvertido;
+      if ((data10[(contar + 1)].mes >= mesActual) && (diaActual != data10[(contar + 1)].dia)) {
+        let mesConvertido = convertMonth(data10[(contar + 1)].mes - 1);
+        spanProximoFeriado2.innerHTML = data10[(contar + 1)].dia + " de " + mesConvertido;
+      };
+      break;
+    };
+    contar++;
+  };
+};
 
 
-// var fecha2 = new Date(data8.location.last_updated);
-// console.log(fecha2);
-// console.log("Actualizado " + fecha2.getDate() + "/" + (fecha2.getMonth() + 1) + "/" + fecha2.getFullYear() + " - " + fecha2.getHours() + ":" + fecha2.getMinutes());
+
+
+/// Falta UPDATE de DOS datos de COVID!!!!
