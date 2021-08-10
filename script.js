@@ -227,6 +227,15 @@ getData8()
 async function getData8() {
   const response8 = await fetch(url8);
   const data8 = await response8.json();
+  /// Update COVID
+  let covidDateFull = new Date(data8.location.last_updated);
+  let updateCovidDate = covidDateFull.getDate() + "/" + (covidDateFull.getMonth() + 1) + "/" + covidDateFull.getFullYear();
+  let spanCovidDate = document.getElementsByClassName("updateCovid");
+  let contadorCovid = 0;
+  for (var i = 0; i < spanCovidDate.length; i++) {
+    spanCovidDate[contadorCovid].innerHTML = updateCovidDate;
+    contadorCovid++;
+  };
   /// COVID Casos
   let covidTotal = Intl.NumberFormat().format(data8.location.latest.confirmed);
   let spanCovidTotal = document.getElementById("covidTotal");
@@ -261,6 +270,15 @@ getData9()
 async function getData9() {
   const response9 = await fetch(url9);
   const data9 = await response9.json();
+  /// Update COVID Vacunacion
+  let covidVacDateFull = new Date(data9.Argentina.All.updated);
+  let updateCovidDate = covidVacDateFull.getDate() + "/" + (covidVacDateFull.getMonth() + 1) + "/" + covidVacDateFull.getFullYear();;
+  let spanCovidVacDate = document.getElementsByClassName("updateCovidVac");
+  let contadorCovidVac = 0;
+  for (var i = 0; i < spanCovidVacDate.length; i++) {
+    spanCovidVacDate[contadorCovidVac].innerHTML = updateCovidDate;
+    contadorCovidVac++;
+  };
   /// COVID Vacunacion
   let covid1Dosis = Intl.NumberFormat().format(data9.Argentina.All.people_partially_vaccinated);
   let spanCovid1Dosis = document.getElementById("covid1Dosis");
@@ -304,7 +322,7 @@ var mesActual = fechaActual.getMonth() + 1;
 var diaActual = fechaActual.getDate();
 var horaActual = fechaActual.getHours();
 var minutosActual = fechaActual.getMinutes();
-var fechaCompleta = diaActual + "/" + mesActual + "/" + añoActual + " " + horaActual + ":" + minutosActual;
+var fechaCompleta = diaActual + "/" + mesActual + "/" + añoActual + " - " + horaActual + ":" + minutosActual;
 
 let url10 = "https://nolaborables.com.ar/api/v2/feriados/" + añoActual;
 getData10()
@@ -335,8 +353,3 @@ async function getData10() {
     contar++;
   };
 };
-
-
-
-
-/// Falta UPDATE de DOS datos de COVID!!!!
