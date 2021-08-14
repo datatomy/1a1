@@ -353,3 +353,235 @@ async function getData10() {
     contar++;
   };
 };
+
+/// Creacion del filtro/menu.
+
+/// Variables del menu.
+
+let menuTodo = document.getElementById("menuTodo");
+let menuOficial = document.getElementById("menuOficial");
+let menuBlue = document.getElementById("menuBlue");
+let menuTurista = document.getElementById("menuTurista");
+let menuCriptos = document.getElementById("menuCriptos");
+let menuCovid = document.getElementById("menuCovid");
+let menuPais = document.getElementById("menuPais");
+
+/// Variables de las tarjetas.
+
+let tarjetaDolarOficial = document.getElementById("tarjetaDolarOficial");
+let tarjetaDolarBlue = document.getElementById("tarjetaDolarBlue");
+let tarjetaDolarTurista = document.getElementById("tarjetaDolarTurista");
+let tarjetaEuroOficial = document.getElementById("tarjetaEuroOficial");
+let tarjetaEuroBlue = document.getElementById("tarjetaEuroBlue");
+let tarjetaEuroTurista = document.getElementById("tarjetaEuroTurista");
+let tarjetaRealOficial = document.getElementById("tarjetaRealOficial");
+let tarjetaRealBlue = document.getElementById("tarjetaRealBlue");
+let tarjetaRealTurista = document.getElementById("tarjetaRealTurista");
+let tarjetaLibraOficial = document.getElementById("tarjetaLibraOficial");
+let tarjetaLibraBlue = document.getElementById("tarjetaLibraBlue");
+let tarjetaLibraTurista = document.getElementById("tarjetaLibraTurista");
+let tarjetaOro = document.getElementById("tarjetaOro");
+let tarjetaBitcoin = document.getElementById("tarjetaBitcoin");
+let tarjetaEthereum = document.getElementById("tarjetaEthereum");
+let tarjetaDai = document.getElementById("tarjetaDai");
+let tarjetaCovid1 = document.getElementById("tarjetaCovid1");
+let tarjetaCovid2 = document.getElementById("tarjetaCovid2");
+let tarjetaVacunacion1 = document.getElementById("tarjetaVacunacion1");
+let tarjetaVacunacion2 = document.getElementById("tarjetaVacunacion2");
+let tarjetaFeriados = document.getElementById("tarjetaFeriados");
+let tarjetaInflacion = document.getElementById("tarjetaInflacion");
+let tarjetaRiesgoPais = document.getElementById("tarjetaRiesgoPais");
+
+
+/// Funciones para los filtros.
+
+function menuTodoF() {
+  tarjetaDolarOficial.style.display = 'block';
+  tarjetaEuroOficial.style.display = 'block';
+  tarjetaRealOficial.style.display = 'block';
+  tarjetaLibraOficial.style.display = 'block';
+  tarjetaOro.style.display = 'block';
+  tarjetaDolarBlue.style.display = 'block';
+  tarjetaDolarTurista.style.display = 'block';
+  tarjetaEuroBlue.style.display = 'block';
+  tarjetaEuroTurista.style.display = 'block';
+  tarjetaRealBlue.style.display = 'block';
+  tarjetaRealTurista.style.display = 'block';
+  tarjetaLibraBlue.style.display = 'block';
+  tarjetaLibraTurista.style.display = 'block';
+  tarjetaBitcoin.style.display = 'block';
+  tarjetaEthereum.style.display = 'block';
+  tarjetaDai.style.display = 'block';
+  tarjetaCovid1.style.display = 'block';
+  tarjetaCovid2.style.display = 'block';
+  tarjetaVacunacion1.style.display = 'block';
+  tarjetaVacunacion2.style.display = 'block';
+  tarjetaFeriados.style.display = 'block';
+  tarjetaInflacion.style.display = 'block';
+  tarjetaRiesgoPais.style.display = 'block';
+};
+
+function menuOficialF() {
+  tarjetaDolarOficial.style.display = 'block';
+  tarjetaEuroOficial.style.display = 'block';
+  tarjetaRealOficial.style.display = 'block';
+  tarjetaLibraOficial.style.display = 'block';
+  tarjetaOro.style.display = 'block';
+  tarjetaDolarBlue.style.display = 'none';
+  tarjetaDolarTurista.style.display = 'none';
+  tarjetaEuroBlue.style.display = 'none';
+  tarjetaEuroTurista.style.display = 'none';
+  tarjetaRealBlue.style.display = 'none';
+  tarjetaRealTurista.style.display = 'none';
+  tarjetaLibraBlue.style.display = 'none';
+  tarjetaLibraTurista.style.display = 'none';
+  tarjetaBitcoin.style.display = 'none';
+  tarjetaEthereum.style.display = 'none';
+  tarjetaDai.style.display = 'none';
+  tarjetaCovid1.style.display = 'none';
+  tarjetaCovid2.style.display = 'none';
+  tarjetaVacunacion1.style.display = 'none';
+  tarjetaVacunacion2.style.display = 'none';
+  tarjetaFeriados.style.display = 'none';
+  tarjetaInflacion.style.display = 'none';
+  tarjetaRiesgoPais.style.display = 'none';
+};
+
+function menuBlueF() {
+  tarjetaDolarOficial.style.display = 'none';
+  tarjetaEuroOficial.style.display = 'none';
+  tarjetaRealOficial.style.display = 'none';
+  tarjetaLibraOficial.style.display = 'none';
+  tarjetaOro.style.display = 'none';
+  tarjetaDolarBlue.style.display = 'block';
+  tarjetaDolarTurista.style.display = 'none';
+  tarjetaEuroBlue.style.display = 'block';
+  tarjetaEuroTurista.style.display = 'none';
+  tarjetaRealBlue.style.display = 'block';
+  tarjetaRealTurista.style.display = 'none';
+  tarjetaLibraBlue.style.display = 'block';
+  tarjetaLibraTurista.style.display = 'none';
+  tarjetaBitcoin.style.display = 'none';
+  tarjetaEthereum.style.display = 'none';
+  tarjetaDai.style.display = 'none';
+  tarjetaCovid1.style.display = 'none';
+  tarjetaCovid2.style.display = 'none';
+  tarjetaVacunacion1.style.display = 'none';
+  tarjetaVacunacion2.style.display = 'none';
+  tarjetaFeriados.style.display = 'none';
+  tarjetaInflacion.style.display = 'none';
+  tarjetaRiesgoPais.style.display = 'none';
+};
+
+function menuTuristaF() {
+  tarjetaDolarOficial.style.display = 'none';
+  tarjetaEuroOficial.style.display = 'none';
+  tarjetaRealOficial.style.display = 'none';
+  tarjetaLibraOficial.style.display = 'none';
+  tarjetaOro.style.display = 'none';
+  tarjetaDolarBlue.style.display = 'none';
+  tarjetaDolarTurista.style.display = 'block';
+  tarjetaEuroBlue.style.display = 'none';
+  tarjetaEuroTurista.style.display = 'block';
+  tarjetaRealBlue.style.display = 'none';
+  tarjetaRealTurista.style.display = 'block';
+  tarjetaLibraBlue.style.display = 'none';
+  tarjetaLibraTurista.style.display = 'block';
+  tarjetaBitcoin.style.display = 'none';
+  tarjetaEthereum.style.display = 'none';
+  tarjetaDai.style.display = 'none';
+  tarjetaCovid1.style.display = 'none';
+  tarjetaCovid2.style.display = 'none';
+  tarjetaVacunacion1.style.display = 'none';
+  tarjetaVacunacion2.style.display = 'none';
+  tarjetaFeriados.style.display = 'none';
+  tarjetaInflacion.style.display = 'none';
+  tarjetaRiesgoPais.style.display = 'none';
+};
+
+function menuCriptosF() {
+  tarjetaDolarOficial.style.display = 'none';
+  tarjetaEuroOficial.style.display = 'none';
+  tarjetaRealOficial.style.display = 'none';
+  tarjetaLibraOficial.style.display = 'none';
+  tarjetaOro.style.display = 'none';
+  tarjetaDolarBlue.style.display = 'none';
+  tarjetaDolarTurista.style.display = 'none';
+  tarjetaEuroBlue.style.display = 'none';
+  tarjetaEuroTurista.style.display = 'none';
+  tarjetaRealBlue.style.display = 'none';
+  tarjetaRealTurista.style.display = 'none';
+  tarjetaLibraBlue.style.display = 'none';
+  tarjetaLibraTurista.style.display = 'none';
+  tarjetaBitcoin.style.display = 'block';
+  tarjetaEthereum.style.display = 'block';
+  tarjetaDai.style.display = 'block';
+  tarjetaCovid1.style.display = 'none';
+  tarjetaCovid2.style.display = 'none';
+  tarjetaVacunacion1.style.display = 'none';
+  tarjetaVacunacion2.style.display = 'none';
+  tarjetaFeriados.style.display = 'none';
+  tarjetaInflacion.style.display = 'none';
+  tarjetaRiesgoPais.style.display = 'none';
+};
+
+function menuCovidF() {
+  tarjetaDolarOficial.style.display = 'none';
+  tarjetaEuroOficial.style.display = 'none';
+  tarjetaRealOficial.style.display = 'none';
+  tarjetaLibraOficial.style.display = 'none';
+  tarjetaOro.style.display = 'none';
+  tarjetaDolarBlue.style.display = 'none';
+  tarjetaDolarTurista.style.display = 'none';
+  tarjetaEuroBlue.style.display = 'none';
+  tarjetaEuroTurista.style.display = 'none';
+  tarjetaRealBlue.style.display = 'none';
+  tarjetaRealTurista.style.display = 'none';
+  tarjetaLibraBlue.style.display = 'none';
+  tarjetaLibraTurista.style.display = 'none';
+  tarjetaBitcoin.style.display = 'none';
+  tarjetaEthereum.style.display = 'none';
+  tarjetaDai.style.display = 'none';
+  tarjetaCovid1.style.display = 'block';
+  tarjetaCovid2.style.display = 'block';
+  tarjetaVacunacion1.style.display = 'block';
+  tarjetaVacunacion2.style.display = 'block';
+  tarjetaFeriados.style.display = 'none';
+  tarjetaInflacion.style.display = 'none';
+  tarjetaRiesgoPais.style.display = 'none';
+};
+
+function menuPaisF() {
+  tarjetaDolarOficial.style.display = 'none';
+  tarjetaEuroOficial.style.display = 'none';
+  tarjetaRealOficial.style.display = 'none';
+  tarjetaLibraOficial.style.display = 'none';
+  tarjetaOro.style.display = 'none';
+  tarjetaDolarBlue.style.display = 'none';
+  tarjetaDolarTurista.style.display = 'none';
+  tarjetaEuroBlue.style.display = 'none';
+  tarjetaEuroTurista.style.display = 'none';
+  tarjetaRealBlue.style.display = 'none';
+  tarjetaRealTurista.style.display = 'none';
+  tarjetaLibraBlue.style.display = 'none';
+  tarjetaLibraTurista.style.display = 'none';
+  tarjetaBitcoin.style.display = 'none';
+  tarjetaEthereum.style.display = 'none';
+  tarjetaDai.style.display = 'none';
+  tarjetaCovid1.style.display = 'none';
+  tarjetaCovid2.style.display = 'none';
+  tarjetaVacunacion1.style.display = 'none';
+  tarjetaVacunacion2.style.display = 'none';
+  tarjetaFeriados.style.display = 'block';
+  tarjetaInflacion.style.display = 'block';
+  tarjetaRiesgoPais.style.display = 'block';
+};
+
+/// Event Listeners
+menuTodo.addEventListener("click", menuTodoF);
+menuOficial.addEventListener("click", menuOficialF);
+menuBlue.addEventListener("click", menuBlueF);
+menuTurista.addEventListener("click", menuTuristaF);
+menuCriptos.addEventListener("click", menuCriptosF);
+menuCovid.addEventListener("click", menuCovidF);
+menuPais.addEventListener("click", menuPaisF);

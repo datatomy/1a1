@@ -6,7 +6,6 @@
         <link href="style.css" rel="stylesheet">
         <link  rel="icon" href="icon.png" type="image/png">
         <link href="bootstrapfiles/bootstrap.min.css" rel="stylesheet">
-        <script src="script.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -27,9 +26,47 @@
             </div>
         </div>
         <div class="container">
+            <div class="row my-4">
+                <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+                    <div class="container-fluid justify-content-center">             
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li id="menuTodo" class="nav-item text-center m-0 p-2 border-bottom border-secondary menu">
+                                <span>Todo</span>
+                            </li>
+                            <li id="menuOficial" class="nav-item text-center m-0 p-2 border-bottom border-secondary menu">
+                                <span>Oficial</span>
+                            </li>
+                            <li id="menuBlue" class="nav-item text-center m-0 p-2 border-bottom border-secondary menu">
+                                <span>Blue</span>
+                            </li>
+                            <li id="menuTurista" class="nav-item text-center m-0 p-2 border-bottom border-secondary menu">
+                                <span>Turista</span>
+                            </li>
+                            <li id="menuCriptos" class="nav-item text-center m-0 p-2 border-bottom border-secondary menu">
+                                <span>Criptos</span>
+                            </li>
+                            <li id="menuCovid" class="nav-item text-center m-0 p-2 border-bottom border-secondary menu">
+                                <span>COVID</span>
+                            </li>
+                            <li id="menuPais" class="nav-item text-center m-0 p-2 border-bottom border-secondary menu">
+                                <span>País</span>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div class="row justify-content-center">
                 <!-- Dolar -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaDolarOficial">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
                         <div class="card-header py-1">
                           Dólar Oficial
@@ -51,7 +88,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaDolarBlue">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
                         <div class="card-header py-1">
                           Dólar Blue
@@ -73,7 +110,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaDolarTurista">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
                         <div class="card-header py-1">
                           Dólar Turista
@@ -96,7 +133,7 @@
                       </div>
                 </div>
                 <!-- Euro -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaEuroOficial">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
                         <div class="card-header py-1">
                           Euro Oficial
@@ -118,7 +155,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaEuroBlue">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
                         <div class="card-header py-1">
                           Euro Blue
@@ -140,7 +177,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaEuroTurista">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
                         <div class="card-header py-1">
                           Euro Turista
@@ -163,7 +200,7 @@
                       </div>
                 </div>
                 <!-- Real -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaRealOficial">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
                         <div class="card-header py-1">
                           Real Oficial
@@ -185,7 +222,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaRealBlue">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
                         <div class="card-header py-1">
                           Real Blue
@@ -207,7 +244,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaRealTurista">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
                         <div class="card-header py-1">
                           Real Turista
@@ -230,7 +267,7 @@
                       </div>
                 </div>
                 <!-- Libra -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaLibraOficial">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
                         <div class="card-header py-1">
                             Libra Oficial
@@ -252,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaLibraBlue">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
                         <div class="card-header py-1">
                             Libra Blue
@@ -274,7 +311,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaLibraTurista">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
                         <div class="card-header py-1">
                             Libra Turista
@@ -297,7 +334,7 @@
                     </div>
                 </div>
                 <!-- Oro -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaOro">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
                         <div class="card-header py-1">
                           Oro
@@ -320,7 +357,7 @@
                       </div>
                 </div>
                 <!-- Criptomonedas -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaBitcoin">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
                         <div class="card-header py-1">
                             Bitcoin
@@ -338,7 +375,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaEthereum">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
                         <div class="card-header py-1">
                             Ethereum
@@ -356,7 +393,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaDai">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
                         <div class="card-header py-1">
                             DAI
@@ -379,7 +416,7 @@
                     </div>
                 </div>
                 <!-- COVID -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaCovid1">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
                         <div class="card-header py-1">
                           COVID Casos Positivos
@@ -401,7 +438,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaCovid2">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
                         <div class="card-header py-1">
                           COVID Datos
@@ -424,7 +461,7 @@
                       </div>
                 </div>
                 <!-- COVID Vacunacion -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaVacunacion1">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
                         <div class="card-header py-1">
                           COVID Vacunacion
@@ -446,7 +483,7 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaVacunacion2">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
                         <div class="card-header py-1">
                           COVID Vacunacion Porcentaje
@@ -469,7 +506,7 @@
                       </div>
                 </div>
                 <!-- Feriados -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaFeriados">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-danger">
                         <div class="card-header py-1">
                             Próximos Feriados
@@ -488,7 +525,7 @@
                     </div>
                 </div>                
                 <!-- Inflación -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaInflacion">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-danger">
                         <div class="card-header py-1">
                           Inflación
@@ -511,7 +548,7 @@
                       </div>
                 </div>
                 <!-- Riesgo Pais -->
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-5" id="tarjetaRiesgoPais">
                     <div class="mb-2 card text-center rounded-3 shadow border border-3 border-danger">
                         <div class="card-header py-1">
                           Riesgo País
@@ -539,5 +576,8 @@
         </div>
         <div id="footer" class="container-fluid text-center py-1 text-center rounded-top shadow fs-6">Mar del plata, Argentina | Hecho por <a class="text-secondary" href="https://github.com/datatomy" style="text-decoration: none;">datatomy</a>.
         </div>
+        <script src="bootstrapfiles/bootstrap.min.js"></script>
+        <script src="bootstrapfiles/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

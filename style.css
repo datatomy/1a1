@@ -38,3 +38,22 @@
         font-size: calc(1.325rem + .8vw) !important;
     }
 }
+
+.menu {
+    transition: all .5s linear;
+    color: grey;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background-color: grey;
+    color: whitesmoke;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+@media (min-width: 990px) {
+    .menu {
+        min-width: 80px;
+    }
+}
