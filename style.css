@@ -1,4 +1,14 @@
 :root {
+    --oficial-color: #169873;
+    --blue-color: #247BA0;
+    --turista-color: #24A8A8;
+    --cripto-color: #FFDA47;
+    --covid-color: #7F7EFF;
+    --pais-color: #F25F5C;
+    --logo-color: #7F7EFF;
+}
+
+/* :root {
     --oficial-color: #AEC3B0;
     --blue-color: #598392;
     --turista-color: #01161E;
@@ -6,12 +16,8 @@
     --covid-color: #EFF6E0;
     --pais-color: #FF8552;
     --logo-color: #124559;
-    --fondo-color: linear-gradient(171deg, rgb(224, 226, 211) 0%, rgba(255,255,255,1) 100%);
-}
-
-.fondo-class {
-    background: var(--fondo-color);
-}
+    --fondo-color: linear-gradient(180deg, rgba(248,252,218,1) 0%, rgba(255,255,255,1) 50%, rgba(248,252,218,1) 100%);
+} */
 
 .fondo-class2 {
     background: rgba(255,255,255,0);

@@ -1,3 +1,12 @@
+// Cierre de menu.
+$(function(){ 
+  var navMain = $("#navbarNavDropdown");
+  navMain.on("click", "span", null, function () {
+      navMain.collapse('hide');
+  });
+});
+
+/// Apis.
 let url = "https://mercados.ambito.com//home/general";
 getData()
   .catch(error => {
