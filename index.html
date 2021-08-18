@@ -10,25 +10,27 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <title>1 a 1 | Info del dólar en Argentina.</title>
-        <meta name="description" content="Valores actuales del Dólar en Argentina."/>
-        <meta name="keywords" content="dolar, plata, dinero, valor, argentina, peso"/>
+        <title>data-arg | Info variada de Argentina.</title>
+        <meta name="description" content="Diferentes datos monetarios y otros en Argentina."/>
+        <meta name="keywords" content="dolar, covid, dinero, valor, argentina, peso"/>
         <meta name="author" content="datatomy"/>
         <meta name="copyright" content="datatomy"/>
         <meta name="robots" content="index,follow"/>
     </head>
-    <body class="bg-light">
+    <body class="fondo-class">
+        <!-- Logo -->
         <div class="container">
             <div class="row justify-content-center my-4">
-                <div class="border border-3 rounded-circle shadow text-decoration-underline text-secondary border-secondary bg-warning" id="logo">
-                    <span id="logo1">1</span>A1
+                <div class="border border-3 shadow rounded-3 border-secondary" id="logo">
+                    data-arg
                 </div>
             </div>
         </div>
+        <!-- Menu -->
         <div class="container">
             <div class="row my-4">
                 <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+                <nav class="navbar navbar-expand-lg navbar-light fondo-class2 justify-content-center">
                     <div class="container-fluid justify-content-center">             
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -63,23 +65,24 @@
                 </div>
             </div>
         </div>
+        <!-- Tarjetas -->
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Dolar -->
                 <div class="col-12 col-md-5" id="tarjetaDolarOficial">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 oficial-class">
                         <div class="card-header py-1">
                           Dólar Oficial
                         </div>
-                        <div class="card-body bg-success">
+                        <div class="card-body oficial-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">Compra</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="oficialCompra"></span></p>
+                                    <p class="card-text text-dark">Compra</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="oficialCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Venta</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="oficialVenta"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Venta</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="oficialVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -89,11 +92,11 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaDolarBlue">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 blue-class">
                         <div class="card-header py-1">
                           Dólar Blue
                         </div>
-                        <div class="card-body bg-primary">
+                        <div class="card-body blue-class">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-light">Compra</p>
@@ -111,19 +114,19 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaDolarTurista">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 turista-class">
                         <div class="card-header py-1">
                           Dólar Turista
                         </div>
-                        <div class="card-body bg-warning">
+                        <div class="card-body turista-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-dark">Compra</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="turistaCompra"></span></p>
+                                    <p class="card-text text-light">Compra</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="turistaCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-dark">
-                                    <p class="card-text text-dark">Venta</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="turistaVenta"></span></p>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Venta</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="turistaVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -134,19 +137,19 @@
                 </div>
                 <!-- Euro -->
                 <div class="col-12 col-md-5" id="tarjetaEuroOficial">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 oficial-class">
                         <div class="card-header py-1">
                           Euro Oficial
                         </div>
-                        <div class="card-body bg-success">
+                        <div class="card-body oficial-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">Compra</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="euroCompra"></span></p>
+                                    <p class="card-text text-dark">Compra</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="euroCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Venta</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="euroVenta"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Venta</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="euroVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -156,11 +159,11 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaEuroBlue">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 blue-class">
                         <div class="card-header py-1">
                           Euro Blue
                         </div>
-                        <div class="card-body bg-primary">
+                        <div class="card-body blue-class">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-light">Compra</p>
@@ -178,19 +181,19 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaEuroTurista">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 turista-class">
                         <div class="card-header py-1">
                           Euro Turista
                         </div>
-                        <div class="card-body bg-warning">
+                        <div class="card-body turista-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-dark">Compra</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="euroTuristaCompra"></span></p>
+                                    <p class="card-text text-light">Compra</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="euroTuristaCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-dark">
-                                    <p class="card-text text-dark">Venta</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="euroTuristaVenta"></span></p>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Venta</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="euroTuristaVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -201,19 +204,19 @@
                 </div>
                 <!-- Real -->
                 <div class="col-12 col-md-5" id="tarjetaRealOficial">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 oficial-class">
                         <div class="card-header py-1">
                           Real Oficial
                         </div>
-                        <div class="card-body bg-success">
+                        <div class="card-body oficial-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">Compra</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="realCompra"></span></p>
+                                    <p class="card-text text-dark">Compra</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="realCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Venta</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="realVenta"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Venta</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="realVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -223,11 +226,11 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaRealBlue">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 blue-class">
                         <div class="card-header py-1">
                           Real Blue
                         </div>
-                        <div class="card-body bg-primary">
+                        <div class="card-body blue-class">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-light">Compra</p>
@@ -245,19 +248,19 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaRealTurista">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 turista-class">
                         <div class="card-header py-1">
                           Real Turista
                         </div>
-                        <div class="card-body bg-warning">
+                        <div class="card-body turista-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-dark">Compra</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="realTuristaCompra"></span></p>
+                                    <p class="card-text text-light">Compra</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="realTuristaCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-dark">
-                                    <p class="card-text text-dark">Venta</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="realTuristaVenta"></span></p>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Venta</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="realTuristaVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -268,19 +271,19 @@
                 </div>
                 <!-- Libra -->
                 <div class="col-12 col-md-5" id="tarjetaLibraOficial">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 oficial-class">
                         <div class="card-header py-1">
                             Libra Oficial
                         </div>
-                        <div class="card-body bg-success">
+                        <div class="card-body oficial-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">Compra</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="libraCompra"></span></p>
+                                    <p class="card-text text-dark">Compra</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="libraCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Venta</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="libraVenta"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Venta</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="libraVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -290,11 +293,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaLibraBlue">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-primary">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 blue-class">
                         <div class="card-header py-1">
                             Libra Blue
                         </div>
-                        <div class="card-body bg-primary">
+                        <div class="card-body blue-class">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-light">Compra</p>
@@ -312,19 +315,19 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaLibraTurista">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-warning">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 turista-class">
                         <div class="card-header py-1">
                             Libra Turista
                         </div>
-                        <div class="card-body bg-warning">
+                        <div class="card-body turista-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-dark">Compra</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="libraTuristaCompra"></span></p>
+                                    <p class="card-text text-light">Compra</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="libraTuristaCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-dark">
-                                    <p class="card-text text-dark">Venta</p>
-                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="libraTuristaVenta"></span></p>
+                                <div class="col border-start border-2 border-light">
+                                    <p class="card-text text-light">Venta</p>
+                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="libraTuristaVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -335,19 +338,19 @@
                 </div>
                 <!-- Oro -->
                 <div class="col-12 col-md-5" id="tarjetaOro">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-success">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 oficial-class">
                         <div class="card-header py-1">
                           Oro
                         </div>
-                        <div class="card-body bg-success">
+                        <div class="card-body oficial-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">Compra</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="oroCompra"></span></p>
+                                    <p class="card-text text-dark">Compra</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="oroCompra"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Venta</p>
-                                    <p class="card-title text-light h2"><span class="signo">$</span><span id="oroVenta"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Venta</p>
+                                    <p class="card-title text-dark h2"><span class="signo">$</span><span id="oroVenta"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -358,11 +361,11 @@
                 </div>
                 <!-- Criptomonedas -->
                 <div class="col-12 col-md-5" id="tarjetaBitcoin">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 cripto-class">
                         <div class="card-header py-1">
                             Bitcoin
                         </div>
-                        <div class="card-body bg-info">
+                        <div class="card-body cripto-class">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-dark">Venta</p>
@@ -376,11 +379,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaEthereum">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 cripto-class">
                         <div class="card-header py-1">
                             Ethereum
                         </div>
-                        <div class="card-body bg-info">
+                        <div class="card-body cripto-class">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-dark">Venta</p>
@@ -394,11 +397,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaDai">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-info">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 cripto-class">
                         <div class="card-header py-1">
                             DAI
                         </div>
-                        <div class="card-body bg-info">
+                        <div class="card-body cripto-class">
                             <div class="row">
                                 <div class="col">
                                     <p class="card-text text-dark">Compra</p>
@@ -417,19 +420,19 @@
                 </div>
                 <!-- COVID -->
                 <div class="col-12 col-md-5" id="tarjetaCovid1">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 covid-class">
                         <div class="card-header py-1">
                           COVID Casos Positivos
                         </div>
-                        <div class="card-body bg-dark">
+                        <div class="card-body covid-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">Ayer</p>
-                                    <p class="card-title text-light h2"><span id="covidAyer"></span></p>
+                                    <p class="card-text text-dark">Ayer</p>
+                                    <p class="card-title text-dark h2"><span id="covidAyer"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Total</p>
-                                    <p class="card-title text-light h2"><span id="covidTotal"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Total</p>
+                                    <p class="card-title text-dark h2"><span id="covidTotal"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -439,19 +442,19 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaCovid2">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 covid-class">
                         <div class="card-header py-1">
                           COVID Datos
                         </div>
-                        <div class="card-body bg-dark">
+                        <div class="card-body covid-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">Fallecidos</p>
-                                    <p class="card-title text-light h2"><span id="covidFallecidos"></span></p>
+                                    <p class="card-text text-dark">Fallecidos</p>
+                                    <p class="card-title text-dark h2"><span id="covidFallecidos"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Recuperados</p>
-                                    <p class="card-title text-light h2"><span id="covidRecuperados"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Recuperados</p>
+                                    <p class="card-title text-dark h2"><span id="covidRecuperados"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -462,19 +465,19 @@
                 </div>
                 <!-- COVID Vacunacion -->
                 <div class="col-12 col-md-5" id="tarjetaVacunacion1">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 covid-class">
                         <div class="card-header py-1">
                           COVID Vacunacion
                         </div>
-                        <div class="card-body bg-dark">
+                        <div class="card-body covid-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">1ra Dosis</p>
-                                    <p class="card-title text-light h4 tamaño"><span id="covid1Dosis"></span></p>
+                                    <p class="card-text text-dark">1ra Dosis</p>
+                                    <p class="card-title text-dark h4 tamaño"><span id="covid1Dosis"></span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">2da Dosis</p>
-                                    <p class="card-title text-light h4 tamaño"><span id="covid2Dosis"></span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">2da Dosis</p>
+                                    <p class="card-title text-dark h4 tamaño"><span id="covid2Dosis"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -484,19 +487,19 @@
                       </div>
                 </div>
                 <div class="col-12 col-md-5" id="tarjetaVacunacion2">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-dark">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 covid-class">
                         <div class="card-header py-1">
                           COVID Vacunacion Porcentaje
                         </div>
-                        <div class="card-body bg-dark">
+                        <div class="card-body covid-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light">1ra Dosis</p>
-                                    <p class="card-title text-light h2"><span id="covid1DosisPor"></span><span class="signo">%</span></p>
+                                    <p class="card-text text-dark">1ra Dosis</p>
+                                    <p class="card-title text-dark h2"><span id="covid1DosisPor"></span><span class="signo">%</span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">2da Dosis</p>
-                                    <p class="card-title text-light h2"><span id="covid2DosisPor"></span><span class="signo">%</span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">2da Dosis</p>
+                                    <p class="card-title text-dark h2"><span id="covid2DosisPor"></span><span class="signo">%</span></p>
                                 </div>
                             </div>
                         </div>
@@ -507,15 +510,15 @@
                 </div>
                 <!-- Feriados -->
                 <div class="col-12 col-md-5" id="tarjetaFeriados">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-danger">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 pais-class">
                         <div class="card-header py-1">
                             Próximos Feriados
                         </div>
-                        <div class="card-body bg-danger">
+                        <div class="card-body pais-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-title text-light h2 border-bottom border-2 border-light p-2"><span id="proximoFeriado"></span></p>
-                                    <p class="card-text text-light"><span id="proximoFeriado2"></span></p>
+                                    <p class="card-title text-dark h2 border-bottom border-2 border-dark p-2"><span id="proximoFeriado"></span></p>
+                                    <p class="card-text text-dark"><span id="proximoFeriado2"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -526,19 +529,19 @@
                 </div>                
                 <!-- Inflación -->
                 <div class="col-12 col-md-5" id="tarjetaInflacion">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-danger">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 pais-class">
                         <div class="card-header py-1">
                           Inflación
                         </div>
-                        <div class="card-body bg-danger">
+                        <div class="card-body pais-class">
                             <div class="row">
                                 <div class="col">
-                                    <p class="card-text text-light"><span id="mesInflacion">Mayo</span></p>
-                                    <p class="card-title text-light h2"><span id="inflacionMensual"></span><span class="signo">%</span></p>
+                                    <p class="card-text text-dark"><span id="mesInflacion">Mayo</span></p>
+                                    <p class="card-title text-dark h2"><span id="inflacionMensual"></span><span class="signo">%</span></p>
                                 </div>
-                                <div class="col border-start border-2 border-light">
-                                    <p class="card-text text-light">Últ. 12 meses</p>
-                                    <p class="card-title text-light h2"><span id="inflacionAnual">50.20</span><span class="signo">%</span></p>
+                                <div class="col border-start border-2 border-dark">
+                                    <p class="card-text text-dark">Últ. 12 meses</p>
+                                    <p class="card-title text-dark h2"><span id="inflacionAnual">51.77</span><span class="signo">%</span></p>
                                 </div>
                             </div>
                         </div>
@@ -549,21 +552,21 @@
                 </div>
                 <!-- Riesgo Pais -->
                 <div class="col-12 col-md-5" id="tarjetaRiesgoPais">
-                    <div class="mb-2 card text-center rounded-3 shadow border border-3 border-danger">
+                    <div class="mb-2 card text-center rounded-3 shadow border-3 pais-class">
                         <div class="card-header py-1">
                           Riesgo País
                         </div>
-                        <div class="card-body bg-danger">
+                        <div class="card-body pais-class">
                             <div class="row">
                                 <div class="col d-flex flex-column justify-content-center align-content-center">
-                                    <p class="card-title text-light h6">Menor <br>(2007) <br> 185</p>
+                                    <p class="card-title text-dark h6">Menor <br>(2007) <br> 185</p>
                                 </div>
-                                <div class="col border-start border-end border-2 border-light d-flex flex-column justify-content-center align-content-center">
-                                    <p class="card-text text-light">Actual</p>
-                                    <p class="card-title text-light h2"><span id="riesgoPais"></span></p>
+                                <div class="col border-start border-end border-2 border-dark d-flex flex-column justify-content-center align-content-center">
+                                    <p class="card-text text-dark">Actual</p>
+                                    <p class="card-title text-dark h2"><span id="riesgoPais"></span></p>
                                 </div>
                                 <div class="col d-flex flex-column justify-content-center align-content-center">
-                                    <p class="card-title text-light h6">Mayor <br>(2002) <br> 7222</p>
+                                    <p class="card-title text-dark h6">Mayor <br>(2002) <br> 7222</p>
                                 </div>
                             </div>
                         </div>
@@ -574,7 +577,8 @@
                 </div>
             </div>
         </div>
-        <div id="footer" class="container-fluid text-center py-1 text-center rounded-top shadow fs-6">Mar del plata, Argentina | Hecho por <a class="text-secondary" href="https://github.com/datatomy" style="text-decoration: none;">datatomy</a>.
+        <!-- Footer -->
+        <div id="footer" class="container-fluid text-center py-1 text-center rounded-top fs-6">Mar del plata, Argentina | Hecho por <a class="text-secondary" href="https://github.com/datatomy" style="text-decoration: none;">datatomy</a>.
         </div>
         <script src="bootstrapfiles/bootstrap.min.js"></script>
         <script src="bootstrapfiles/bootstrap.bundle.min.js"></script>

@@ -1,25 +1,77 @@
+:root {
+    --oficial-color: #AEC3B0;
+    --blue-color: #598392;
+    --turista-color: #01161E;
+    --cripto-color: #E9D758;
+    --covid-color: #EFF6E0;
+    --pais-color: #FF8552;
+    --logo-color: #124559;
+    --fondo-color: linear-gradient(171deg, rgb(224, 226, 211) 0%, rgba(255,255,255,1) 100%);
+}
+
+.fondo-class {
+    background: var(--fondo-color);
+}
+
+.fondo-class2 {
+    background: rgba(255,255,255,0);
+}
+
+.oficial-class {
+    background-color: var(--oficial-color);
+    border-color: var(--oficial-color) !important;
+}
+
+.blue-class {
+    background-color: var(--blue-color);
+    border-color: var(--blue-color) !important;
+}
+
+.turista-class {
+    background-color: var(--turista-color);
+    border-color: var(--turista-color) !important;
+}
+
+.cripto-class {
+    background-color: var(--cripto-color);
+    border-color: var(--cripto-color) !important;
+}
+
+.covid-class {
+    background-color: var(--covid-color);
+    border-color: var(--covid-color) !important;
+}
+
+.pais-class {
+    background-color: var(--pais-color);
+    border-color: var(--pais-color) !important;
+}
+
 #logo {
     font-family: 'Russo One', sans-serif;
-    width: 60px;
-    height: 60px;
+    background-color: var(--logo-color);
+    color: #f8f9fa;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     /* animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction> <fill-mode> <play-state> */
-    animation: rotateY 5s ease 2s 3 normal forwards running;
+    animation: intercambio 5s ease 2s 1 normal forwards running;
 }
 
-#logo1 {
-    transform:  rotateY(180deg);
-}
-
-@keyframes rotateY {
+@keyframes intercambio {
     0% {
-        transform:  rotateY(0deg);
+        background-color: var(--logo-color);
+        color: #f8f9fa;
+    }
+    50% {
+        background-color: #f8f9fa;
+        color: var(--logo-color);
     }
     100% {
-        transform:  rotateY(360deg);
+        background-color: var(--logo-color);
+        color: #f8f9fa;
     }
 }
 
@@ -30,7 +82,7 @@
 
 #footer {
     font-size: 10px !important;
-    background-color: var(--bs-light);
+    background: rgba(255,255,255,0);
 }
 
 @media (min-width: 745px) {
